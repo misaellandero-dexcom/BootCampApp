@@ -38,11 +38,11 @@ import Combine
                 guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
-                self.decodeMovies(from: output.data)
+                //self.decodeMovies(from: output.data)
                 return output.data
             }
-            .decode(type: MovieResponse.self, decoder: JSONDecoder())
-            .map { $0.results }
+            .decode(type: [Movie].self, decoder: JSONDecoder())
+            .map { $0 }
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
