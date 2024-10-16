@@ -31,6 +31,8 @@ struct SideBarView: View {
     }
 }
 
+/*
 #Preview {
     ContentView()
 }
+*/

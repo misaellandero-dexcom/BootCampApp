@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieCellView: View {
-    let movie : MovieModel
+    let movie : Movie
     var body: some View {
         HStack{ 
             AsyncImage(
@@ -26,7 +26,7 @@ struct MovieCellView: View {
             )
             
             VStack{
-                Text(movie.titleText?.text ?? "")
+                Text(movie.title)
                 #if os(watchOS)
                     .font(.body)
                 #else
@@ -35,7 +35,7 @@ struct MovieCellView: View {
                     .bold()
                 +
                 Text(" \n")
-                Text(movie.unwrappedYear,format: .number.grouping(.never))
+                Text(movie.releaseDate ?? "")
                     .font(.caption)
                     .bold()
                     .foregroundStyle(.secondary)
@@ -45,7 +45,8 @@ struct MovieCellView: View {
         }
     }
 }
-
+/*
 #Preview {
     MovieCellView(movie:MovieModel.movieSample1)
 }
+*/

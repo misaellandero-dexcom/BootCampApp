@@ -7,72 +7,67 @@
 
 import SwiftUI
 
-
-struct MovieModel : Identifiable, Codable {
-    
-    var id: String
-    var primaryImage : String
-    var titleText : TitleText?
-    var releaseYear : ReleaseYear?
-    
+// MARK: - MovieModelElement
+struct Movie: Codable, Identifiable {
+    let id: String
+    let movieModelID: Int
+    let title: String
+    let voteAverage: Double
+    let voteCount: Int
+    let status: Status
+    let releaseDate: String?
+    let revenue, runtime: Int
+    let adult: Bool
+    let backdropPath: String?
+    let budget: Int
+    let homepage: String?
+    let imdbID: String?
+    let originalLanguage: OriginalLanguage
+    let originalTitle, overview: String
+    let popularity: Double
+    let posterPath: String?
+    let tagline, genres, productionCompanies, productionCountries: String?
+    let spokenLanguages: String?
     
     //Computed properity
     var imageURL: URL? {
-        return URL(string: primaryImage)
+         URL(string: posterPath ?? "")
     }
-    
-    var unwrappedYear : Int {
-        releaseYear?.year ?? 2000
-    }
-    
-    
-    
-    //For moc and sample content
-    static var movieSample1 : MovieModel = MovieModel(id: UUID().uuidString, primaryImage: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/NowShowing/10286/10286_aa.jpg", titleText: TitleText(text: "Superman"), releaseYear: ReleaseYear(year: 1997))
-    static var movieSample2 : MovieModel = MovieModel(id: UUID().uuidString, primaryImage: "https://images.moviesanywhere.com/e550520706d54c8390e7286cfe8a7ba0/7576269b-8ca6-477f-a8c3-fa441484806d.webp?h=375&resize=fit&w=250", titleText:  TitleText(text: "Superman 2"), releaseYear: ReleaseYear(year: 1997))
-    static var movieSample3 : MovieModel = MovieModel(id: UUID().uuidString, primaryImage: "https://static.wikia.nocookie.net/dcmovies/images/a/aa/Poster-superman3.jpg/revision/latest?cb=20100518210919", titleText: TitleText(text: "Superman 3"), releaseYear: ReleaseYear(year: 1997))
-    
-    
-    static var movieSamples = [movieSample1 ,movieSample2, movieSample3]
-    
-    
-    // Coding keys to map the response fields
+
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case titleText = "titleText"
-        case releaseYear
-        case primaryImage = "primaryImage.url" // Directly extract image URL from nested object
-    }
-   
-}
-
-
-struct ReleaseYear : Codable{
-    var year: Int
-    // Keys to map the response fields
-    enum CodingKeys: String, CodingKey {
-        case year
-    }
-}
-
-struct TitleText : Codable{
-    var text: String
-    // Keys to map the response fields
-    enum CodingKeys: String, CodingKey {
-        case text
+        case movieModelID = "id"
+        case title
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
+        case status
+        case releaseDate = "release_date"
+        case revenue, runtime, adult
+        case backdropPath = "backdrop_path"
+        case budget, homepage
+        case imdbID = "imdb_id"
+        case originalLanguage = "original_language"
+        case originalTitle = "original_title"
+        case overview, popularity
+        case posterPath = "poster_path"
+        case tagline, genres
+        case productionCompanies = "production_companies"
+        case productionCountries = "production_countries"
+        case spokenLanguages = "spoken_languages"
     }
 }
 
-struct primaryImage : Codable{
-    var text: String
-    // Keys to map the response fields
-    enum CodingKeys: String, CodingKey {
-        case text
-    }
+enum OriginalLanguage: String, Codable {
+    case en = "en"
+    case es = "es"
 }
 
+enum Status: String, Codable {
+    case released = "Released"
+}
 
+ 
 struct MovieResponse: Codable {
-    let results: [MovieModel]
+    let results: [Movie]
 }
  

@@ -39,8 +39,8 @@ struct MovieList: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     #endif
                     Button("Search") {
-                        viewModel.movies = MovieModel.movieSamples
-                        //viewModel.searchMovies(byTitle: search)
+                        //viewModel.movies = MovieModel.movieSamples
+                        viewModel.searchMovies(byTitle: search)
                     }
                     .buttonStyle(BorderedProminentButtonStyle())
                 }

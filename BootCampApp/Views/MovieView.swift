@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieView: View {
-    let movie: MovieModel
+    let movie: Movie
     var body: some View {
         VStack{
             AsyncImage(
@@ -23,10 +23,11 @@ struct MovieView: View {
                 }
             )
         }
-        .navigationTitle(movie.titleText?.text ?? "")
+        .navigationTitle(movie.title)
     }
 }
-
+/*
 #Preview {
     MovieView(movie: MovieModel.movieSample1)
 }
+*/
