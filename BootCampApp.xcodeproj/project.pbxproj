@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792C510D2CC0936600D8464D /* MockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C510C2CC0935600D8464D /* MockResponse.swift */; };
+		792C510E2CC0936600D8464D /* MockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C510C2CC0935600D8464D /* MockResponse.swift */; };
 		F462B4372CC027EF00A62363 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4362CC027EF00A62363 /* MovieView.swift */; };
 		F462B4392CC0280800A62363 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4382CC0280800A62363 /* MovieModel.swift */; };
 		F462B4422CC02C3F00A62363 /* BootCampWathcApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F462B4412CC02C3F00A62363 /* BootCampWathcApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -66,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		792C510C2CC0935600D8464D /* MockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponse.swift; sourceTree = "<group>"; };
 		F462B4362CC027EF00A62363 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		F462B4382CC0280800A62363 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		F462B43C2CC02C3F00A62363 /* BootCampWathcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BootCampWathcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +159,7 @@
 		F498D8932CB4978000855D1F /* BootCampApp */ = {
 			isa = PBXGroup;
 			children = (
+				792C510C2CC0935600D8464D /* MockResponse.swift */,
 				F462B4352CC023AD00A62363 /* ViewModel */,
 				F498D8A42CB4988700855D1F /* Models */,
 				F498D8A32CB4987D00855D1F /* Views */,
@@ -381,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F462B47B2CC0589600A62363 /* MovieList.swift in Sources */,
+				792C510E2CC0936600D8464D /* MockResponse.swift in Sources */,
 				F462B4742CC02C7D00A62363 /* MovieModel.swift in Sources */,
 				F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */,
 				F462B4752CC02C8000A62363 /* LargeDeviceNavigation.swift in Sources */,
@@ -414,6 +419,7 @@
 				F462B4372CC027EF00A62363 /* MovieView.swift in Sources */,
 				F462B4852CC0867700A62363 /* iPhoneNavigation.swift in Sources */,
 				F462B47D2CC05EA900A62363 /* MoviesViewModel.swift in Sources */,
+				792C510D2CC0936600D8464D /* MockResponse.swift in Sources */,
 				F462B4772CC04C4C00A62363 /* MovieCellView.swift in Sources */,
 				F498D8952CB4978000855D1F /* BootCampAppApp.swift in Sources */,
 			);
