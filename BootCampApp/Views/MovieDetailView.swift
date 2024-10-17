@@ -30,9 +30,9 @@ struct MovieDetailView: View {
             ) { phase in
                 switch phase {
                 case .success(let image):
-                    BlurredImageBackground(image: image, blurdheight: 100)
+                    BlurredImageBackground(image: image, blurHeight: 100)
                 default:
-                    BlurredImageBackground(image: Image(.inseptionTest), blurdheight: 100)
+                    BlurredImageBackground(image: Image(.inseptionTest), blurHeight: 100)
                 }
             }
             .edgesIgnoringSafeArea(.all)
@@ -49,18 +49,16 @@ struct MovieDetailView: View {
                     .bold()
                     .foregroundStyle(.secondary)
                 
-                Text(movie.genres ?? "Drama")
-                    .fontWeight(.light)
                 
                 HStack(spacing:20){
                     //Play trailer button
-                    Bagde(text: "Trailer", image: "Play")
+                    Bagde(text: "Trailer", image: "play")
                     
                     //Popularity Gauge
-                    PopularityGauge(popularity: movie.UnwrappedPopularity)
+                    PopularityGauge(popularity: movie.unwrappedPopularity)
                     
                     //Release Date
-                    ReleaseDateBadge(releaseDate: movie.UnwrappedReleaseDate)
+                    ReleaseDateBadge(releaseDate: movie.unwrappedReleaseDate)
                     
                 }
                 
@@ -77,7 +75,7 @@ struct MovieDetailView: View {
                     .foregroundStyle(.secondary)
                     .padding()
                 Spacer()
-                movieRevenueBadge(revenue: movie.UnwrappedRevenue, budget: movie.UnwrappedBudget)
+                movieRevenueBadge(revenue: movie.unwrappedRevenue, budget: movie.unwrappedBudget)
                 
                 Spacer()
                     .frame(height: 200)
@@ -99,7 +97,7 @@ struct movieRevenueBadge : View {
     var budget: Double
     
     var body: some View {
-        Gauge(value: revenue, in: budget...revenue) {
+        Gauge(value: revenue, in: 0...budget) {
             Text("Popularity")
         } currentValueLabel: {
             Text(Image(systemName: "dollarsign.arrow.trianglehead.counterclockwise.rotate.90"))

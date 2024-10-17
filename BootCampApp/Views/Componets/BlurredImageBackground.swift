@@ -10,7 +10,7 @@ import SwiftUI
 struct BlurredImageBackground: View {
     
     var image: Image
-    var blurdheight : CGFloat = 200
+    var blurHeight : CGFloat = 200
     
     var body: some View {
         VStack{
@@ -18,7 +18,7 @@ struct BlurredImageBackground: View {
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: blurdheight, alignment: .bottom).clipped()
+                .frame(height: blurHeight, alignment: .bottom).clipped()
                 .blur(radius: 15)
         }
         .background{

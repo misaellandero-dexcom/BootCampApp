@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     
-    @Binding var OnBoardingCompleted : Bool
+    @Binding var onBoardingCompleted : Bool
     
     // The name of the local image resource located in 'Assets'
     let imageName = "FindingDory" //"image0"
@@ -31,7 +31,7 @@ struct OnboardingView: View {
                 }
                 .foregroundColor(.white)
                 PrimaryButton(action: {
-                    OnBoardingCompleted = true
+                    onBoardingCompleted = true
                 })
                 .padding(.horizontal, 20)
                 
@@ -61,5 +61,5 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView(OnBoardingCompleted: .constant(false))
+    OnboardingView(onBoardingCompleted: .constant(false))
 }

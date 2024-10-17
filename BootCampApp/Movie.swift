@@ -26,21 +26,21 @@ struct Movie: Codable, Identifiable {
          URL(string: posterPath ?? "")
     }
 
-    //UnwrappedValues
+    // MARK: Computed Properity
     
-    var UnwrappedPopularity : Double {
+    var unwrappedPopularity : Double {
         popularity ?? 0.0
     }
     
-    var UnwrappedRevenue: Double {
+    var unwrappedRevenue: Double {
         Double(revenue ?? Int(0))
     }
     
-    var UnwrappedBudget : Double {
+    var unwrappedBudget : Double {
         Double(budget ?? Int(0))
     }
     
-    var UnwrappedReleaseDate : Date {
+    var unwrappedReleaseDate : Date {
         DateFormatter().date(from: releaseDate ?? "") ?? Date()
     }
     
@@ -67,7 +67,7 @@ extension Movie {
                               releaseDate: "2010-07-15T00:00:00.000Z",
                               adult: false,
                               popularity: 83.952,
-                              revenue: 839_030_630,
+                              revenue: 80_630,
                               budget: 160_000_000,
                               imdbID: "tt6793710",
                               overview: "Dom Cobb and Arthur are extractors who perform corporate espionage using experimental dream-sharing technology to infiltrate their targets' subconscious and extract information. Their latest target, Saito, is impressed with Cobb's ability to layer multiple dreams within each other. He offers to hire Cobb for the ostensibly impossible job of implanting an idea into a person's subconscious; performing inception on Robert Fischer, the son of Saito's competitor Maurice Fischer, with the idea to dissolve his father's company. In return, Saito promises to clear Cobb's criminal status, allowing him to return home to his children.",

@@ -18,7 +18,7 @@ struct BootCampAppApp: App {
             if UserOnBoardingCompleted {
                 MovieDetailView(movie: Movie.sample)
             } else {
-                OnboardingView(OnBoardingCompleted: $UserOnBoardingCompleted)
+                OnboardingView(onBoardingCompleted: $UserOnBoardingCompleted)
             }
             
         }
