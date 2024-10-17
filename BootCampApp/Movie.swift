@@ -21,12 +21,12 @@ struct Movie: Codable, Identifiable {
     let overview : String?
     let tagline: String?
     let genres: String?
+     
+    // MARK: Computed Properity
     
     var imageURL: URL? {
          URL(string: posterPath ?? "")
     }
-
-    // MARK: Computed Properity
     
     var unwrappedPopularity : Double {
         popularity ?? 0.0
