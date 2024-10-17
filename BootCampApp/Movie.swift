@@ -26,6 +26,29 @@ struct Movie: Codable, Identifiable {
          URL(string: posterPath ?? "")
     }
 
+    //UnwrappedValues
+    
+    var UnwrappedPopularity : Double {
+        popularity ?? 0.0
+    }
+    
+    var UnwrappedRevenue: Double {
+        Double(revenue ?? Int(0))
+    }
+    
+    var UnwrappedBudget : Double {
+        Double(budget ?? Int(0))
+    }
+    
+    var UnwrappedReleaseDate : Date {
+        DateFormatter().date(from: releaseDate ?? "") ?? Date()
+    }
+    
+    var gendersArray : [String] {
+        genres?.components(separatedBy: ",") ?? []
+    }
+    
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case title
@@ -40,14 +63,14 @@ struct Movie: Codable, Identifiable {
 extension Movie {
     static let sample = Movie(id: 01,
                               title: "Inception",
-                              posterPath: "https://image.tmdb.org/t/p/original//oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+                              posterPath: "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
                               releaseDate: "2010-07-15T00:00:00.000Z",
                               adult: false,
                               popularity: 83.952,
-                              revenue: 332356,
-                              budget: 0,
+                              revenue: 839_030_630,
+                              budget: 160_000_000,
                               imdbID: "tt6793710",
-                              overview: "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment",
-                              tagline: "The prequel to the cult film El Crack",
-                              genres: "Drama, Thriller")
+                              overview: "Dom Cobb and Arthur are extractors who perform corporate espionage using experimental dream-sharing technology to infiltrate their targets' subconscious and extract information. Their latest target, Saito, is impressed with Cobb's ability to layer multiple dreams within each other. He offers to hire Cobb for the ostensibly impossible job of implanting an idea into a person's subconscious; performing inception on Robert Fischer, the son of Saito's competitor Maurice Fischer, with the idea to dissolve his father's company. In return, Saito promises to clear Cobb's criminal status, allowing him to return home to his children.",
+                              tagline: "Your mind is the scene of the crime.",
+                              genres: "Action, Adventure, Sci-Fi, Thriller")
 }
