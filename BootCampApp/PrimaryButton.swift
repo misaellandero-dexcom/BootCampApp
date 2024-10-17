@@ -30,7 +30,6 @@ struct PrimaryButton: View {
                     .padding(.horizontal, 80)
             }
         }
-        .tint(Color("PrimaryButtonColor"))
     }
 }
 

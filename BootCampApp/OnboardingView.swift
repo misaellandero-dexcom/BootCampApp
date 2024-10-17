@@ -16,7 +16,7 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            VStack(spacing: 10) {
+            VStack(spacing: 15) {
                 Group {
                     Text("Find All Movies")
                         .font(.largeTitle)
@@ -25,24 +25,21 @@ struct OnboardingView: View {
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
                         .padding(.horizontal, 140)
+                        .padding(.bottom, 20)
                 }
-                .padding(.bottom, 10)
                 .foregroundColor(.white)
                 PrimaryButton()
                 .padding(.horizontal, 20)
             }
             .zIndex(1)
             .padding(.top, 50)
-            .background(.ultraThinMaterial)
             AsyncImage(
                 url: imageURL,
                 transaction: Transaction(animation: .easeIn(duration: 2))
                     ) { phase in
                         switch phase {
                         case .success(let image):
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
+                            blurredImageBackground(image)
                         default:
                             placeholderImage
                         }
@@ -53,9 +50,21 @@ struct OnboardingView: View {
     
     @ViewBuilder
     var placeholderImage: some View {
-        Image(imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
+        blurredImageBackground(Image(imageName))
+    }
+    
+    @ViewBuilder
+    func blurredImageBackground(_ image: Image) -> some View {
+        ZStack(alignment: .bottom) {
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 250, alignment: .bottom).clipped()
+                .blur(radius: 10)
+        }
     }
 }
 
