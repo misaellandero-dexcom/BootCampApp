@@ -26,8 +26,7 @@ struct MovieView: View {
         .navigationTitle(movie.title)
     }
 }
-/*
+
 #Preview {
-    MovieView(movie: MovieModel.movieSample1)
+    MovieView(movie: Movie.sample)
 }
-*/
