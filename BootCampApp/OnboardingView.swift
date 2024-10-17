@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    
+    // The name of the local image resource located in 'Assets'
     let imageName = "FindingDory" //"image0"
+    
+    // The URL of the image to download
+    let imageURL = URL(string: "https://lumiere-a.akamaihd.net/v1/images/02_kotpota_teaser_1sht_las_652fbe30.jpeg")
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -24,38 +27,29 @@ struct OnboardingView: View {
                         .padding(.horizontal, 140)
                 }
                 .foregroundColor(.white)
-                Button {
-                    print("Button tapped")
-                } label: {
-                    HStack {
-                        Text("Enter Now")
-                            .fontWeight(.bold)
-                            .foregroundColor(.init(red: 0.261, green: 0.261, blue: 0.261))
-                            .frame(maxWidth: .infinity)
-                            .padding(10)
-                            .background {
-                                let cornerRadius = 15.0
-                                RoundedRectangle(cornerRadius: cornerRadius)
-                                .foregroundColor(.yellow)
-                                .background {
-                                    RoundedRectangle(cornerRadius: cornerRadius)
-                                        .stroke(Color("PrimaryButttonBorderColor"), lineWidth: 2)
-                                }
-                            }
-                            .padding(.horizontal, 80)
-                    }
-                }
-                .tint(Color("PrimaryButtonColor"))
+                PrimaryButton()
                 .padding(.horizontal, 20)
             }
             .zIndex(1)
             .padding(.top, 50)
             .background(.ultraThinMaterial)
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .edgesIgnoringSafeArea(.vertical)
+            AsyncImage(url: imageURL) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+
+            } placeholder: {
+                placeholderImage
+            }
+            .edgesIgnoringSafeArea(.vertical)
         }
+    }
+    
+    @ViewBuilder
+    var placeholderImage: some View {
+        Image(imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
     }
 }
 
