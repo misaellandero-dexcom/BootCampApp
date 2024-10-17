@@ -1,5 +1,5 @@
 //
-//  MovieView.swift
+//  MovieDetailView.swift
 //  BootCampApp
 //
 //  Created by Francisco Landero on 16/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MovieView: View {
+struct MovieDetailView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -23,8 +23,20 @@ struct MovieView: View {
     
     var body: some View {
         ZStack{
-           
-            BackGroundImage(bgColor: bgColor, imageURL: movie.imageURL)
+            
+            AsyncImage(
+                url: movie.imageURL,
+                transaction: Transaction(animation: .easeIn(duration: 2))
+            ) { phase in
+                switch phase {
+                case .success(let image):
+                    BlurredImageBackground(image: image, blurdheight: 100)
+                default:
+                    BlurredImageBackground(image: Image(.inseptionTest), blurdheight: 100)
+                }
+            }
+            .edgesIgnoringSafeArea(.all)
+            
             
             ScrollView(.vertical){
                 
@@ -62,20 +74,21 @@ struct MovieView: View {
                 Spacer()
                 
                 Text(movie.overview ?? "")
-                        .foregroundStyle(.secondary)
-                        .padding()
+                    .foregroundStyle(.secondary)
+                    .padding()
                 Spacer()
                 movieRevenueBadge(revenue: movie.UnwrappedRevenue, budget: movie.UnwrappedBudget)
                 
+                Spacer()
+                    .frame(height: 200)
+                
+            }
+            .background {
+                    bgColor
+                        .blur(radius: 20)
+                
             }
             .offset(y:200)
-            .background {
-                bgColor
-                    .scaledToFill()
-                    .offset(y:200)
-                    .blur(radius: 20)
-            }
-            
         }
         .navigationTitle(movie.title)
     }
@@ -87,16 +100,16 @@ struct movieRevenueBadge : View {
     
     var body: some View {
         Gauge(value: revenue, in: budget...revenue) {
-                  Text("Popularity")
-              } currentValueLabel: {
-                  Text(Image(systemName: "dollarsign.arrow.trianglehead.counterclockwise.rotate.90"))
-              } minimumValueLabel: {
-                  Text("\(revenue)")
-              } maximumValueLabel: {
-                  Text("\(budget)")
-              }
-              .gaugeStyle(.accessoryCircularCapacity)
-              .tint(.yellow)
+            Text("Popularity")
+        } currentValueLabel: {
+            Text(Image(systemName: "dollarsign.arrow.trianglehead.counterclockwise.rotate.90"))
+        } minimumValueLabel: {
+            Text("\(revenue)")
+        } maximumValueLabel: {
+            Text("\(budget)")
+        }
+        .gaugeStyle(.accessoryCircularCapacity)
+        .tint(.yellow)
         
         Text("Revenue ")
         + Text(revenue, format: .currency(code: "usd"))
@@ -135,19 +148,19 @@ struct PopularityGauge: View {
     var popularity : Double
     var body: some View {
         Gauge(value: popularity, in: 0...100) {
-                  Text("Popularity")
-              } currentValueLabel: {
-                  Text(Image(systemName: "star.fill"))
-                  // Text(Int(movie.popularity ?? 0.0), format: .percent )
-              } minimumValueLabel: {
-                  Text("\(Int(popularity))")
-                      
-              } maximumValueLabel: {
-                  Text("\(Int(100))")
-              }
-              .gaugeStyle(.accessoryCircular)
-              .tint(.yellow)
-              .frame(width: .infinity)
+            Text("Popularity")
+        } currentValueLabel: {
+            Text(Image(systemName: "star.fill"))
+            // Text(Int(movie.popularity ?? 0.0), format: .percent )
+        } minimumValueLabel: {
+            Text("\(Int(popularity))")
+            
+        } maximumValueLabel: {
+            Text("\(Int(100))")
+        }
+        .gaugeStyle(.accessoryCircular)
+        .tint(.yellow)
+        .frame(width: .infinity)
     }
 }
 
@@ -201,5 +214,5 @@ struct BackGroundImage : View {
 
 
 #Preview {
-    MovieView(movie: Movie.sample)
+    MovieDetailView(movie: Movie.sample)
 }

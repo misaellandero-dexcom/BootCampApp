@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    @Binding var OnBoardingCompleted : Bool
+    
     // The name of the local image resource located in 'Assets'
     let imageName = "FindingDory" //"image0"
     
@@ -24,13 +27,16 @@ struct OnboardingView: View {
                     Text("Search and find the greatest movies of all time")
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
-                        .padding(.horizontal, 140)
                         .padding(.bottom, 20)
                 }
                 .foregroundColor(.white)
-                PrimaryButton()
+                PrimaryButton(action: {
+                    OnBoardingCompleted = true
+                })
                 .padding(.horizontal, 20)
+                
             }
+            .padding()
             .background{
                 AsyncImage(
                     url: imageURL,
@@ -38,9 +44,9 @@ struct OnboardingView: View {
                         ) { phase in
                             switch phase {
                             case .success(let image):
-                                blurredImageBackground(image)
+                                BlurredImageBackground(image: image)
                             default:
-                                placeholderImage
+                                BlurredImageBackground(image: Image(imageName))
                             }
                         }
                         .edgesIgnoringSafeArea(.all)
@@ -48,26 +54,12 @@ struct OnboardingView: View {
       
     }
     
-    @ViewBuilder
-    var placeholderImage: some View {
-        blurredImageBackground(Image(imageName))
-    }
     
-    @ViewBuilder
-    func blurredImageBackground(_ image: Image) -> some View {
-        ZStack(alignment: .bottom) {
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 250, alignment: .bottom).clipped()
-                .blur(radius: 10)
-        }
-    }
+    
+ 
+ 
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(OnBoardingCompleted: .constant(false))
 }

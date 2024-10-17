@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct BootCampAppApp: App {
+    
+    //Var to save into the phone permante storage the state of the onboarding
+    @AppStorage("UserOnBoardingCompleted") var UserOnBoardingCompleted = false
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            if UserOnBoardingCompleted {
+                MovieDetailView(movie: Movie.sample)
+            } else {
+                OnboardingView(OnBoardingCompleted: $UserOnBoardingCompleted)
+            }
+            
         }
     }
 }
