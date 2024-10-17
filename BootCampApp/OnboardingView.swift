@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    let imageName = "FindingDory" //"image0"
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 20) {
@@ -15,7 +18,7 @@ struct OnboardingView: View {
                     Text("Find All Movies")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
-                    Text("Search and find the greatest movies of all times")
+                    Text("Search and find the greatest movies of all time")
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
                         .padding(.horizontal, 140)
@@ -48,7 +51,7 @@ struct OnboardingView: View {
             .zIndex(1)
             .padding(.top, 50)
             .background(.ultraThinMaterial)
-            Image("image0")
+            Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.vertical)
