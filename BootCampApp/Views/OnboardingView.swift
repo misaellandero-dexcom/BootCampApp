@@ -13,16 +13,16 @@ struct OnboardingView: View {
     let imageName = "FindingDory" //"image0"
     
     // The URL of the image to download
-    let imageURL = URL(string: "https://lumiere-a.akamaihd.net/v1/images/02_kotpota_teaser_1sht_las_652fbe30.jpeg")
+    let movie: Movie
     
     var body: some View {
             VStack() {
                 Spacer()
                 Group {
-                    Text("Find All Movies")
+                    Text("Watch: \(movie.title)")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
-                    Text("Search and find the greatest movies of all time")
+                    Text(movie.unwrappedReleaseDate, format: .dateTime.day().month().year())
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
                         .padding(.bottom, 20)
@@ -35,7 +35,7 @@ struct OnboardingView: View {
             .padding()
             .background{
                 AsyncImage(
-                    url: imageURL,
+                    url: movie.imageURL,
                     transaction: Transaction(animation: .easeIn(duration: 2))
                         ) { phase in
                             switch phase {
@@ -57,5 +57,5 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(movie: Movie.sample)
 }

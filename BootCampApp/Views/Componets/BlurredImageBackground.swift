@@ -10,7 +10,7 @@ import SwiftUI
 struct BlurredImageBackground: View {
     
     var image: Image
-    var blurHeight : CGFloat = 200
+    var blurHeight : CGFloat = 250
     
     var body: some View {
         VStack{

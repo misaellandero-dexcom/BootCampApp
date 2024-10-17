@@ -62,15 +62,15 @@ struct Movie: Codable, Identifiable {
 // MARK: Example
 extension Movie {
     static let sample = Movie(id: 01,
-                              title: "Inception",
-                              posterPath: "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
-                              releaseDate: "2010-07-15T00:00:00.000Z",
+                              title: "Kingdom of the Planet of the Apes",
+                              posterPath: "https://lumiere-a.akamaihd.net/v1/images/02_kotpota_teaser_1sht_las_652fbe30.jpeg",
+                              releaseDate: "2024-07-15T00:00:00.000Z",
                               adult: false,
                               popularity: 83.952,
-                              revenue: 80_630,
+                              revenue: 120_000_000,
                               budget: 160_000_000,
                               imdbID: "tt6793710",
-                              overview: "Dom Cobb and Arthur are extractors who perform corporate espionage using experimental dream-sharing technology to infiltrate their targets' subconscious and extract information. Their latest target, Saito, is impressed with Cobb's ability to layer multiple dreams within each other. He offers to hire Cobb for the ostensibly impossible job of implanting an idea into a person's subconscious; performing inception on Robert Fischer, the son of Saito's competitor Maurice Fischer, with the idea to dissolve his father's company. In return, Saito promises to clear Cobb's criminal status, allowing him to return home to his children.",
-                              tagline: "Your mind is the scene of the crime.",
+                              overview: "The new Apes movie is set many years after the conclusion of 2017's War for the Planet of the Apes. Many apes societies have grown from when the Moses-like Caesar brought his people to an oasis, while humans have been reduced to a feral-like existence. Some ape groups have never heard of Caesar, while others have contorted his teaching to build burgeoning empires. In this setting, one ape leader begins to enslave other groups to find human technology, while another ape, who watched his clan be taken, embarks on a journey to find freedom. A young human woman becomes key to the latter's quest, although she has plans of her own..",
+                              tagline: "No One Can Stop the Reign",
                               genres: "Action, Adventure, Sci-Fi, Thriller")
 }
