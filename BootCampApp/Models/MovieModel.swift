@@ -10,24 +10,27 @@ import SwiftUI
 // MARK: - MovieModelElement
 struct Movie: Codable, Identifiable {
     let id: String
-    let movieModelID: Int?
     let title: String
     let posterPath: String?
     let releaseDate: String?
-    
     /*
+    let adult: Bool?
+    let popularity: Double?
+    let overview : String?
+    let revenue : Int?
+    
     let voteAverage: Double?
     let voteCount: Int?
     let status: Status?
     let revenue, runtime: Int?
-    let adult: Bool?
+   
     let backdropPath: String?
     let budget: Int?
     let homepage: String?
     let imdbID: String?
     let originalLanguage: String?
     let originalTitle, overview: String
-    //let popularity: Double?    let tagline, genres, productionCompanies, productionCountries: String?
+    //   let tagline, genres, productionCompanies, productionCountries: String?
     let spokenLanguages: String?*/
     
     //Computed properity
@@ -36,12 +39,11 @@ struct Movie: Codable, Identifiable {
     }
 
     enum CodingKeys: String, CodingKey {
-        case id = "_id"
-        case movieModelID = "id"
+        case id = "id"
         case title
-         case posterPath = "poster_path"
-        
+        case posterPath = "poster_path"
         case releaseDate = "release_date"
+        //case adult, popularity, overview,revenue
         /*
         case voteAverage = "vote_average"
         case voteCount = "vote_count"

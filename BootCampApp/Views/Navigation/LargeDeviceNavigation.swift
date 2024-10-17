@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SideBarView: View {
+struct LargeDeviceNavigation: View {
    
     var body: some View {
         NavigationSplitView {
@@ -31,8 +31,8 @@ struct SideBarView: View {
     }
 }
 
-/*
+
 #Preview {
-    ContentView()
+    LargeDeviceNavigation()
 }
-*/
+

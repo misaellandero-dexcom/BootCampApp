@@ -13,15 +13,16 @@
 		F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8942CB4978000855D1F /* BootCampAppApp.swift */; };
 		F462B4732CC02C7A00A62363 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4362CC027EF00A62363 /* MovieView.swift */; };
 		F462B4742CC02C7D00A62363 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4382CC0280800A62363 /* MovieModel.swift */; };
-		F462B4752CC02C8000A62363 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8962CB4978000855D1F /* SideBarView.swift */; };
+		F462B4752CC02C8000A62363 /* LargeDeviceNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8962CB4978000855D1F /* LargeDeviceNavigation.swift */; };
 		F462B4772CC04C4C00A62363 /* MovieCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4762CC04C4C00A62363 /* MovieCellView.swift */; };
 		F462B4782CC0572500A62363 /* MovieCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4762CC04C4C00A62363 /* MovieCellView.swift */; };
 		F462B47A2CC0589600A62363 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4792CC0589600A62363 /* MovieList.swift */; };
 		F462B47B2CC0589600A62363 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4792CC0589600A62363 /* MovieList.swift */; };
 		F462B47D2CC05EA900A62363 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B47C2CC05EA900A62363 /* MoviesViewModel.swift */; };
 		F462B47E2CC05EA900A62363 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B47C2CC05EA900A62363 /* MoviesViewModel.swift */; };
+		F462B4852CC0867700A62363 /* iPhoneNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4842CC0867700A62363 /* iPhoneNavigation.swift */; };
 		F498D8952CB4978000855D1F /* BootCampAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8942CB4978000855D1F /* BootCampAppApp.swift */; };
-		F498D8972CB4978000855D1F /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8962CB4978000855D1F /* SideBarView.swift */; };
+		F498D8972CB4978000855D1F /* LargeDeviceNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8962CB4978000855D1F /* LargeDeviceNavigation.swift */; };
 		F498D8992CB4978200855D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F498D8982CB4978200855D1F /* Assets.xcassets */; };
 		F498D89D2CB4978200855D1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F498D89C2CB4978200855D1F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -74,9 +75,10 @@
 		F462B4762CC04C4C00A62363 /* MovieCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellView.swift; sourceTree = "<group>"; };
 		F462B4792CC0589600A62363 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		F462B47C2CC05EA900A62363 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		F462B4842CC0867700A62363 /* iPhoneNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneNavigation.swift; sourceTree = "<group>"; };
 		F498D8912CB4978000855D1F /* BootCampApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BootCampApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F498D8942CB4978000855D1F /* BootCampAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootCampAppApp.swift; sourceTree = "<group>"; };
-		F498D8962CB4978000855D1F /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
+		F498D8962CB4978000855D1F /* LargeDeviceNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDeviceNavigation.swift; sourceTree = "<group>"; };
 		F498D8982CB4978200855D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F498D89A2CB4978200855D1F /* BootCampApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BootCampApp.entitlements; sourceTree = "<group>"; };
 		F498D89C2CB4978200855D1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -122,6 +124,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F462B4832CC085EE00A62363 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F498D8962CB4978000855D1F /* LargeDeviceNavigation.swift */,
+				F462B4842CC0867700A62363 /* iPhoneNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		F498D8882CB4978000855D1F = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +160,6 @@
 				F498D8A42CB4988700855D1F /* Models */,
 				F498D8A32CB4987D00855D1F /* Views */,
 				F498D8942CB4978000855D1F /* BootCampAppApp.swift */,
-				F498D8962CB4978000855D1F /* SideBarView.swift */,
 				F498D8982CB4978200855D1F /* Assets.xcassets */,
 				F498D89A2CB4978200855D1F /* BootCampApp.entitlements */,
 				F498D89B2CB4978200855D1F /* Preview Content */,
@@ -168,6 +178,7 @@
 		F498D8A32CB4987D00855D1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F462B4832CC085EE00A62363 /* Navigation */,
 				F462B4362CC027EF00A62363 /* MovieView.swift */,
 				F462B4762CC04C4C00A62363 /* MovieCellView.swift */,
 				F462B4792CC0589600A62363 /* MovieList.swift */,
@@ -372,7 +383,7 @@
 				F462B47B2CC0589600A62363 /* MovieList.swift in Sources */,
 				F462B4742CC02C7D00A62363 /* MovieModel.swift in Sources */,
 				F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */,
-				F462B4752CC02C8000A62363 /* SideBarView.swift in Sources */,
+				F462B4752CC02C8000A62363 /* LargeDeviceNavigation.swift in Sources */,
 				F462B47E2CC05EA900A62363 /* MoviesViewModel.swift in Sources */,
 				F462B4782CC0572500A62363 /* MovieCellView.swift in Sources */,
 				F462B4732CC02C7A00A62363 /* MovieView.swift in Sources */,
@@ -399,8 +410,9 @@
 			files = (
 				F462B47A2CC0589600A62363 /* MovieList.swift in Sources */,
 				F462B4392CC0280800A62363 /* MovieModel.swift in Sources */,
-				F498D8972CB4978000855D1F /* SideBarView.swift in Sources */,
+				F498D8972CB4978000855D1F /* LargeDeviceNavigation.swift in Sources */,
 				F462B4372CC027EF00A62363 /* MovieView.swift in Sources */,
+				F462B4852CC0867700A62363 /* iPhoneNavigation.swift in Sources */,
 				F462B47D2CC05EA900A62363 /* MoviesViewModel.swift in Sources */,
 				F462B4772CC04C4C00A62363 /* MovieCellView.swift in Sources */,
 				F498D8952CB4978000855D1F /* BootCampAppApp.swift in Sources */,
