@@ -30,6 +30,7 @@ struct PrimaryButton: View {
                     .padding(.horizontal, 80)
             }
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 

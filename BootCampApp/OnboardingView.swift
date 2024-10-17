@@ -15,8 +15,8 @@ struct OnboardingView: View {
     let imageURL = URL(string: "https://lumiere-a.akamaihd.net/v1/images/02_kotpota_teaser_1sht_las_652fbe30.jpeg")
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            VStack(spacing: 15) {
+            VStack() {
+                Spacer()
                 Group {
                     Text("Find All Movies")
                         .font(.largeTitle)
@@ -31,21 +31,21 @@ struct OnboardingView: View {
                 PrimaryButton()
                 .padding(.horizontal, 20)
             }
-            .zIndex(1)
-            .padding(.top, 50)
-            AsyncImage(
-                url: imageURL,
-                transaction: Transaction(animation: .easeIn(duration: 2))
-                    ) { phase in
-                        switch phase {
-                        case .success(let image):
-                            blurredImageBackground(image)
-                        default:
-                            placeholderImage
+            .background{
+                AsyncImage(
+                    url: imageURL,
+                    transaction: Transaction(animation: .easeIn(duration: 2))
+                        ) { phase in
+                            switch phase {
+                            case .success(let image):
+                                blurredImageBackground(image)
+                            default:
+                                placeholderImage
+                            }
                         }
-                    }
-            .edgesIgnoringSafeArea(.vertical)
-        }
+                        .edgesIgnoringSafeArea(.all)
+            }
+      
     }
     
     @ViewBuilder

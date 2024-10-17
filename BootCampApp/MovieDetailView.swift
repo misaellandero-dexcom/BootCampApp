@@ -182,7 +182,7 @@ struct BackGroundImage : View {
             content: { image in
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .edgesIgnoringSafeArea(.all)
                     .offset(y:-400)
