@@ -16,7 +16,7 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            VStack(spacing: 20) {
+            VStack(spacing: 10) {
                 Group {
                     Text("Find All Movies")
                         .font(.largeTitle)
@@ -26,6 +26,7 @@ struct OnboardingView: View {
                         .fontWeight(.light)
                         .padding(.horizontal, 140)
                 }
+                .padding(.bottom, 10)
                 .foregroundColor(.white)
                 PrimaryButton()
                 .padding(.horizontal, 20)
@@ -33,14 +34,19 @@ struct OnboardingView: View {
             .zIndex(1)
             .padding(.top, 50)
             .background(.ultraThinMaterial)
-            AsyncImage(url: imageURL) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-
-            } placeholder: {
-                placeholderImage
-            }
+            AsyncImage(
+                url: imageURL,
+                transaction: Transaction(animation: .easeIn(duration: 2))
+                    ) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        default:
+                            placeholderImage
+                        }
+                    }
             .edgesIgnoringSafeArea(.vertical)
         }
     }
