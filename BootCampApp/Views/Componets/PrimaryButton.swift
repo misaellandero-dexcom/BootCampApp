@@ -9,9 +9,12 @@ import SwiftUI
 
 struct PrimaryButton: View {
 
+    let action: ()  -> Void
+    
     var body: some View {
         Button {
             print("Button tapped")
+            action()
         } label: {
             HStack {
                 Text("Enter Now")
@@ -36,5 +39,5 @@ struct PrimaryButton: View {
 }
 
 #Preview {
-    PrimaryButton()
+    PrimaryButton(action: {})
 }

@@ -14,7 +14,9 @@ struct OnboardingView: View {
     
     // The URL of the image to download
     let movie: Movie
-    
+  
+    @Binding var onboardingCompleted : Bool
+      
     var body: some View {
         VStack(spacing: 15) {
             
@@ -32,11 +34,13 @@ struct OnboardingView: View {
                 }
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
-                
-                PrimaryButton()
-                .padding(.horizontal, 20)
-                
-            }
+            
+            PrimaryButton(action: {
+                onboardingCompleted = true
+            })
+            .padding(.horizontal, 20)
+            
+        }
             .padding()
             .background{
                 AsyncImage(
@@ -62,5 +66,5 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView(movie: Movie.sample)
+    OnboardingView(movie: Movie.sample, onboardingCompleted: .constant(true))
 }

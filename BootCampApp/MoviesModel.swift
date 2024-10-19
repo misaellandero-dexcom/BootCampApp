@@ -20,6 +20,5 @@ import SwiftUI
         } catch {
             print("Failed to decode mock data: \(error)")
         }
-        
-    }
+    } 
 }
