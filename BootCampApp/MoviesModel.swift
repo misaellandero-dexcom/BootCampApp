@@ -17,4 +17,10 @@ import SwiftUI
             movies = await service.fetchMovies()
         }
     }
+    
+    func searchMovieByTitle(title : String) {
+        Task {
+            movies = await service.fetchMovies(title: title)
+        }
+    }
 }

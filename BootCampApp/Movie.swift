@@ -56,6 +56,10 @@ struct Movie: Codable, Identifiable{
         genres?.components(separatedBy: ",") ?? []
     }
     
+    var isAdult : Bool {
+        adult ?? true
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case title
