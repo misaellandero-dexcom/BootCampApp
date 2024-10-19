@@ -17,7 +17,9 @@ struct OnboardingView: View {
     
     var body: some View {
         VStack(spacing: 15) {
+            
                 Spacer()
+            
                 Group {
                     Text(movie.title)
                         .font(.largeTitle)
