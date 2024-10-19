@@ -26,6 +26,10 @@
 		F4CA6F722CC34D9500B256AE /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F702CC34D9500B256AE /* MoviesModel.swift */; };
 		F4CA6F742CC34E4E00B256AE /* MockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F732CC34E4E00B256AE /* MockResponse.swift */; };
 		F4CA6F752CC34E4E00B256AE /* MockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F732CC34E4E00B256AE /* MockResponse.swift */; };
+		F4CA6F772CC3595C00B256AE /* iPhoneNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F762CC3595C00B256AE /* iPhoneNavigation.swift */; };
+		F4CA6F782CC3595C00B256AE /* iPhoneNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F762CC3595C00B256AE /* iPhoneNavigation.swift */; };
+		F4CA6F7A2CC3596B00B256AE /* OtherDevicesNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F792CC3596B00B256AE /* OtherDevicesNavigation.swift */; };
+		F4CA6F7B2CC3596B00B256AE /* OtherDevicesNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F792CC3596B00B256AE /* OtherDevicesNavigation.swift */; };
 		F4DC1EA32CC1B55000839C38 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */; };
 		F4DC1EA42CC1B55000839C38 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */; };
 		F4DC1EA62CC1BBCE00839C38 /* BlurredImageBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1EA52CC1BBCE00839C38 /* BlurredImageBackground.swift */; };
@@ -87,6 +91,8 @@
 		F4CA6F6D2CC3496000B256AE /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
 		F4CA6F702CC34D9500B256AE /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
 		F4CA6F732CC34E4E00B256AE /* MockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponse.swift; sourceTree = "<group>"; };
+		F4CA6F762CC3595C00B256AE /* iPhoneNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneNavigation.swift; sourceTree = "<group>"; };
+		F4CA6F792CC3596B00B256AE /* OtherDevicesNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDevicesNavigation.swift; sourceTree = "<group>"; };
 		F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		F4DC1EA52CC1BBCE00839C38 /* BlurredImageBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredImageBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +189,8 @@
 				792C510F2CC0A3B600D8464D /* OnboardingView.swift */,
 				F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */,
 				F4CA6F6A2CC33AFD00B256AE /* MovieRow.swift */,
+				F4CA6F762CC3595C00B256AE /* iPhoneNavigation.swift */,
+				F4CA6F792CC3596B00B256AE /* OtherDevicesNavigation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,12 +385,14 @@
 				792C51162CC0D81400D8464D /* PrimaryButton.swift in Sources */,
 				F4CA6F722CC34D9500B256AE /* MoviesModel.swift in Sources */,
 				F462B4742CC02C7D00A62363 /* Movie.swift in Sources */,
+				F4CA6F7B2CC3596B00B256AE /* OtherDevicesNavigation.swift in Sources */,
 				F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */,
 				F4CA6F6C2CC33AFD00B256AE /* MovieRow.swift in Sources */,
 				F4CA6F742CC34E4E00B256AE /* MockResponse.swift in Sources */,
 				F4DC1EA62CC1BBCE00839C38 /* BlurredImageBackground.swift in Sources */,
 				F4CA6F6F2CC3496000B256AE /* MoviesList.swift in Sources */,
 				792C51112CC0A3B600D8464D /* OnboardingView.swift in Sources */,
+				F4CA6F782CC3595C00B256AE /* iPhoneNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +418,14 @@
 				792C51172CC0D81400D8464D /* PrimaryButton.swift in Sources */,
 				F4CA6F712CC34D9500B256AE /* MoviesModel.swift in Sources */,
 				F462B4392CC0280800A62363 /* Movie.swift in Sources */,
+				F4CA6F7A2CC3596B00B256AE /* OtherDevicesNavigation.swift in Sources */,
 				792C51102CC0A3B600D8464D /* OnboardingView.swift in Sources */,
 				F4CA6F6B2CC33AFD00B256AE /* MovieRow.swift in Sources */,
 				F4CA6F752CC34E4E00B256AE /* MockResponse.swift in Sources */,
 				F4DC1EA72CC1BBCE00839C38 /* BlurredImageBackground.swift in Sources */,
 				F4CA6F6E2CC3496000B256AE /* MoviesList.swift in Sources */,
 				F498D8952CB4978000855D1F /* BootCampAppApp.swift in Sources */,
+				F4CA6F772CC3595C00B256AE /* iPhoneNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
