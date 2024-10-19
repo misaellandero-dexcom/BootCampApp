@@ -19,7 +19,7 @@ struct MovieRow: View {
                     .cornerRadius(10)
                 
             } placeholder: {
-                 ProgressView()
+                ProgressView()
             }
             .frame(height: 120)
             

@@ -10,21 +10,21 @@ import SwiftUI
 @main
 struct BootCampAppApp: App {
     
-    //Movies model
+    // Movies model
     @State private var model = MoviesModel()
     
     @AppStorage("UserOnBoardingCompleted") var userOnBoardingCompleted = false
-         
+    
     var body: some Scene {
         WindowGroup {
-            NavigationStack{
+            NavigationStack {
                 if userOnBoardingCompleted {
                     MoviesList()
                 } else {
                     OnboardingView(movie: Movie.sample, onboardingCompleted: $userOnBoardingCompleted)
                 }
             }
-            
+            .accentColor(.yellow)
         }
         .environment(model)
     }
