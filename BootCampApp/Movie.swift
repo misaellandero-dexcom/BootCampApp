@@ -8,7 +8,7 @@
 import SwiftUI
 
 // MARK: - Movie
-struct Movie: Codable, Identifiable {
+struct Movie: Codable, Identifiable{
     let id: Int
     let title: String
     let posterPath: String?

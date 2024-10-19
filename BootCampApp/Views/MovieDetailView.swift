@@ -87,8 +87,7 @@ struct MovieDetailView: View {
                 
             }
             .offset(y:200)
-        }
-        .navigationTitle(movie.title)
+        } 
     }
 }
 

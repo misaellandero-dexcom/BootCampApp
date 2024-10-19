@@ -11,7 +11,9 @@ import SwiftUI
 struct BootCampAppApp: App {
     var body: some Scene {
         WindowGroup {
-            MovieRow(movie: Movie.sample)
+            NavigationStack{
+                MovieList()
+            }
         }
     }
 }
