@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-struct MovieList: View {
-    @State var movies = [Movie.sample]
+struct MoviesList: View {
+    
+    @Environment(MoviesModel.self) private var model
+      
+    
     var body: some View {
-        List(movies){ movie in
+        List(model.movies) { movie in
             NavigationLink {
                 MovieDetailView(movie: movie)
             } label: {
@@ -18,9 +21,15 @@ struct MovieList: View {
             }
         }
         .navigationTitle("Movies")
+        .task {
+            model.fetchMovies()
+        }
     }
 }
 
 #Preview {
-    MovieList()
+    NavigationStack {
+        MoviesList()
+            .environment(MoviesModel())
+    }
 }

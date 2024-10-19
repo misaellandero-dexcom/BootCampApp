@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct BootCampAppApp: App {
+    
+    @State private var model = MoviesModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack{
-                MovieList()
+                OnboardingView(movie: Movie.sample)
             }
         }
+        .environment(model)
     }
 }
