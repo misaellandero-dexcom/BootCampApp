@@ -166,20 +166,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F4DC1EA82CC1C79400839C38 /* Componets */ = {
+		F4DC1EA82CC1C79400839C38 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				F4DC1EA52CC1BBCE00839C38 /* BlurredImageBackground.swift */,
 				792C51152CC0D81400D8464D /* PrimaryButton.swift */,
 				F4CA6F6D2CC3496000B256AE /* MoviesList.swift */,
 			);
-			path = Componets;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		F4DC1EA92CC1C7B700839C38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F4DC1EA82CC1C79400839C38 /* Componets */,
+				F4DC1EA82CC1C79400839C38 /* Components */,
 				792C510F2CC0A3B600D8464D /* OnboardingView.swift */,
 				F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */,
 				F4CA6F6A2CC33AFD00B256AE /* MovieRow.swift */,

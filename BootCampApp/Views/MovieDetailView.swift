@@ -22,7 +22,7 @@ struct MovieDetailView: View {
     }
     
     var body: some View {
-        ZStack{
+        ZStack {
             
             AsyncImage(
                 url: movie.imageURL,
@@ -50,7 +50,7 @@ struct MovieDetailView: View {
                     .foregroundStyle(.secondary)
                 
                 
-                HStack(spacing:20){
+                HStack(spacing: 20) {
                     //Play trailer button
                     Bagde(text: "Trailer", image: "play")
                     
@@ -82,12 +82,11 @@ struct MovieDetailView: View {
                 
             }
             .background {
-                    bgColor
-                        .blur(radius: 20)
-                
+                LinearGradient(colors: [bgColor, bgColor, bgColor, bgColor, .clear], startPoint: .bottom, endPoint: .top)
+                    .offset(y: -150)
             }
             .offset(y:200)
-        } 
+        }
     }
 }
 
@@ -117,10 +116,9 @@ struct movieRevenueBadge : View {
 
 struct GendersBadges : View {
     var genders : [String]
-    var colors : [Color] = [.blue,.pink,.red, .indigo, .purple, .orange, .green, .brown]
     var body: some View {
         ForEach(genders, id: \.self){ gender in
-            Bagde(text: gender, image: "star.fill", backgroud: colors.randomElement() ?? .yellow)
+            Bagde(text: gender, image: "star.fill", backgroud: .gray)
         }
     }
 }
