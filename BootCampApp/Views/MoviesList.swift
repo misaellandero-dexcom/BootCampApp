@@ -11,7 +11,6 @@ struct MoviesList: View {
     
     @Environment(MoviesModel.self) private var model
       
-    
     var body: some View {
         List(model.movies) { movie in
             NavigationLink {

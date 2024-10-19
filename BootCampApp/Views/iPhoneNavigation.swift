@@ -11,7 +11,8 @@ struct iPhoneNavigation: View {
     var body: some View {
         TabView {
             NavigationStack{
-                MoviesList()
+                MoviesList() 
+                .navigationTitle("Movies")
             }.tabItem {
                 Text("Home")
                 Image(systemName: "house")

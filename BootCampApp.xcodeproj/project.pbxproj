@@ -30,6 +30,7 @@
 		F4CA6F782CC3595C00B256AE /* iPhoneNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F762CC3595C00B256AE /* iPhoneNavigation.swift */; };
 		F4CA6F7A2CC3596B00B256AE /* OtherDevicesNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F792CC3596B00B256AE /* OtherDevicesNavigation.swift */; };
 		F4CA6F7B2CC3596B00B256AE /* OtherDevicesNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA6F792CC3596B00B256AE /* OtherDevicesNavigation.swift */; };
+		F4CA6F7C2CC363B300B256AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F498D8982CB4978200855D1F /* Assets.xcassets */; };
 		F4DC1EA32CC1B55000839C38 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */; };
 		F4DC1EA42CC1B55000839C38 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */; };
 		F4DC1EA62CC1BBCE00839C38 /* BlurredImageBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1EA52CC1BBCE00839C38 /* BlurredImageBackground.swift */; };
@@ -175,9 +176,9 @@
 		F4DC1EA82CC1C79400839C38 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F4CA6F6A2CC33AFD00B256AE /* MovieRow.swift */,
 				F4DC1EA52CC1BBCE00839C38 /* BlurredImageBackground.swift */,
 				792C51152CC0D81400D8464D /* PrimaryButton.swift */,
-				F4CA6F6D2CC3496000B256AE /* MoviesList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -185,10 +186,10 @@
 		F4DC1EA92CC1C7B700839C38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F4DC1EA82CC1C79400839C38 /* Components */,
-				792C510F2CC0A3B600D8464D /* OnboardingView.swift */,
+				F4CA6F6D2CC3496000B256AE /* MoviesList.swift */,
 				F4DC1EA22CC1B55000839C38 /* MovieDetailView.swift */,
-				F4CA6F6A2CC33AFD00B256AE /* MovieRow.swift */,
+				792C510F2CC0A3B600D8464D /* OnboardingView.swift */,
+				F4DC1EA82CC1C79400839C38 /* Components */,
 				F4CA6F762CC3595C00B256AE /* iPhoneNavigation.swift */,
 				F4CA6F792CC3596B00B256AE /* OtherDevicesNavigation.swift */,
 			);
@@ -348,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CA6F7C2CC363B300B256AE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
