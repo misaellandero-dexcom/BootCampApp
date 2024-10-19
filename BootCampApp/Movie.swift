@@ -30,6 +30,14 @@ struct Movie: Codable, Identifiable {
     
     var unwrappedPopularity : Double {
         popularity ?? 0.0
+    } 
+    
+    /// Returns the description of the IMDb popularity on a scale of 0 to 10
+    var shortPopularityDescription: String {
+        
+        let popularity  =  unwrappedPopularity / 10
+        
+        return String(popularity.formatted(.number.precision(.fractionLength(1))) + "/10 IMDb")
     }
     
     var unwrappedRevenue: Double {
@@ -62,5 +70,5 @@ extension Movie {
                               imdbID: "tt6793710",
                               overview: "The new Apes movie is set many years after the conclusion of 2017's War for the Planet of the Apes. Many apes societies have grown from when the Moses-like Caesar brought his people to an oasis, while humans have been reduced to a feral-like existence. Some ape groups have never heard of Caesar, while others have contorted his teaching to build burgeoning empires. In this setting, one ape leader begins to enslave other groups to find human technology, while another ape, who watched his clan be taken, embarks on a journey to find freedom. A young human woman becomes key to the latter's quest, although she has plans of her own..",
                               tagline: "No One Can Stop the Reign",
-                              genres: "Action, Adventure, Sci-Fi, Thriller")
+                              genres: "Action, Adventuressadasdasdasdasdasd, Sci-Fi, Thriller, Sci-Fi, Sci-Fi")
 }
