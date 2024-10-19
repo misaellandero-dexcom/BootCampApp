@@ -16,18 +16,21 @@ struct OnboardingView: View {
     let movie: Movie
     
     var body: some View {
-            VStack() {
+        VStack(spacing: 15) {
                 Spacer()
                 Group {
-                    Text("Watch: \(movie.title)")
+                    Text(movie.title)
                         .font(.largeTitle)
                         .fontWeight(.heavy)
+                    
                     Text(movie.unwrappedReleaseDate, format: .dateTime.day().month().year())
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
                         .padding(.bottom, 20)
                 }
                 .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                
                 PrimaryButton()
                 .padding(.horizontal, 20)
                 
