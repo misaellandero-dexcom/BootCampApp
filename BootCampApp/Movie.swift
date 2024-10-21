@@ -55,6 +55,20 @@ struct Movie: Codable, Identifiable{
     var gendersArray : [String] {
         genres?.components(separatedBy: ",") ?? []
     }
+    
+    var isAdult : Bool {
+        adult ?? true
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case title
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
+        case adult, popularity, overview,revenue, budget, tagline, genres
+        case imdbID = "imdb_id"
+    }
+    
 }
 
 // MARK: Example

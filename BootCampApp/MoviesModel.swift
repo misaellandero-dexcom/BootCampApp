@@ -10,15 +10,17 @@ import SwiftUI
 @Observable class MoviesModel {
     
     var movies = [Movie]()
+    private let service = MoviesService()
     
     func fetchMovies() {
-        
-        let moviesData = Data(mockResponse.utf8)
-        
-        do {
-            movies = try JSONDecoder().decode([Movie].self, from: moviesData)
-        } catch {
-            print("Failed to decode mock data: \(error)")
+        Task {
+            movies = await service.fetchMovies()
         }
-    } 
+    }
+    
+    func searchMovieByTitle(title : String) {
+        Task {
+            movies = await service.fetchMovies(title: title)
+        }
+    }
 }

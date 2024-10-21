@@ -11,6 +11,8 @@
 		792C51112CC0A3B600D8464D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C510F2CC0A3B600D8464D /* OnboardingView.swift */; };
 		792C51162CC0D81400D8464D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C51152CC0D81400D8464D /* PrimaryButton.swift */; };
 		792C51172CC0D81400D8464D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C51152CC0D81400D8464D /* PrimaryButton.swift */; };
+		792C511D2CC36C9B00D8464D /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C511C2CC36C9B00D8464D /* MoviesService.swift */; };
+		792C511E2CC36C9B00D8464D /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C511C2CC36C9B00D8464D /* MoviesService.swift */; };
 		F462B4392CC0280800A62363 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4382CC0280800A62363 /* Movie.swift */; };
 		F462B4422CC02C3F00A62363 /* BootCampWathcApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F462B4412CC02C3F00A62363 /* BootCampWathcApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8942CB4978000855D1F /* BootCampAppApp.swift */; };
@@ -78,6 +80,7 @@
 /* Begin PBXFileReference section */
 		792C510F2CC0A3B600D8464D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		792C51152CC0D81400D8464D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		792C511C2CC36C9B00D8464D /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		F462B4382CC0280800A62363 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F462B43C2CC02C3F00A62363 /* BootCampWathcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BootCampWathcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F462B4412CC02C3F00A62363 /* BootCampWathcApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BootCampWathcApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +164,7 @@
 				F498D8982CB4978200855D1F /* Assets.xcassets */,
 				F498D89A2CB4978200855D1F /* BootCampApp.entitlements */,
 				F498D89B2CB4978200855D1F /* Preview Content */,
+				792C511C2CC36C9B00D8464D /* MoviesService.swift */,
 			);
 			path = BootCampApp;
 			sourceTree = "<group>";
@@ -178,6 +182,7 @@
 			children = (
 				F4CA6F6A2CC33AFD00B256AE /* MovieRow.swift */,
 				F4DC1EA52CC1BBCE00839C38 /* BlurredImageBackground.swift */,
+				F4CA6F6A2CC33AFD00B256AE /* MovieRow.swift */,
 				792C51152CC0D81400D8464D /* PrimaryButton.swift */,
 			);
 			path = Components;
@@ -391,6 +396,7 @@
 				F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */,
 				F4CA6F6C2CC33AFD00B256AE /* MovieRow.swift in Sources */,
 				F4CA6F742CC34E4E00B256AE /* MockResponse.swift in Sources */,
+				792C511E2CC36C9B00D8464D /* MoviesService.swift in Sources */,
 				F4DC1EA62CC1BBCE00839C38 /* BlurredImageBackground.swift in Sources */,
 				F4CA6F6F2CC3496000B256AE /* MoviesList.swift in Sources */,
 				792C51112CC0A3B600D8464D /* OnboardingView.swift in Sources */,
@@ -424,6 +430,7 @@
 				792C51102CC0A3B600D8464D /* OnboardingView.swift in Sources */,
 				F4CA6F6B2CC33AFD00B256AE /* MovieRow.swift in Sources */,
 				F4CA6F752CC34E4E00B256AE /* MockResponse.swift in Sources */,
+				792C511D2CC36C9B00D8464D /* MoviesService.swift in Sources */,
 				F4DC1EA72CC1BBCE00839C38 /* BlurredImageBackground.swift in Sources */,
 				F4CA6F6E2CC3496000B256AE /* MoviesList.swift in Sources */,
 				F498D8952CB4978000855D1F /* BootCampAppApp.swift in Sources */,

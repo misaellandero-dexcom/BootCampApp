@@ -10,7 +10,8 @@ import SwiftUI
 struct MoviesList: View {
     
     @Environment(MoviesModel.self) private var model
-      
+    @State var searchQuery = ""
+  
     var body: some View {
         List(model.movies) { movie in
             NavigationLink {
@@ -23,6 +24,12 @@ struct MoviesList: View {
         .task {
             model.fetchMovies()
         }
+        .searchable(text: $searchQuery, prompt: "Movie title to search")
+        .onSubmit(of: .search, search)
+    }
+    
+    func search() {
+        model.searchMovieByTitle(title: searchQuery)
     }
 }
 
