@@ -5,6 +5,7 @@
 //  Created by Francisco Landero on 07/10/24.
 //
 
+
 import SwiftUI
 
 @main
@@ -17,14 +18,18 @@ struct BootCampAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
+            Group {
                 if userOnBoardingCompleted {
-                    MoviesList()
+                    #if os(iOS)
+                    iPhoneNavigation()
+                    #else
+                    OtherDevicesNavigation()
+                    #endif
                 } else {
                     OnboardingView(movie: Movie.sample, onboardingCompleted: $userOnBoardingCompleted)
                 }
             }
-            .accentColor(.yellow)
+            .accentColor(.yellow) 
         }
         .environment(model)
     }
