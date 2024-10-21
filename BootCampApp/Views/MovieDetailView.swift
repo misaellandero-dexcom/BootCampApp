@@ -82,9 +82,8 @@ struct MovieDetailView: View {
                 
             }
             .background {
-                    bgColor
-                        .blur(radius: 20)
-                
+                LinearGradient(colors: [bgColor, bgColor, bgColor, bgColor, .clear], startPoint: .bottom, endPoint: .top)
+                    .offset(y: -150)
             }
             .offset(y:200)
         }
