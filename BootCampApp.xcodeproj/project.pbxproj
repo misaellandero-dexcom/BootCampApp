@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76E41FC72CC85F040030FE71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E41FC62CC85F040030FE71 /* ContentView.swift */; };
+		76E41FC82CC85F040030FE71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E41FC62CC85F040030FE71 /* ContentView.swift */; };
 		F462B4392CC0280800A62363 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462B4382CC0280800A62363 /* Movie.swift */; };
 		F462B4422CC02C3F00A62363 /* BootCampWathcApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F462B4412CC02C3F00A62363 /* BootCampWathcApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498D8942CB4978000855D1F /* BootCampAppApp.swift */; };
@@ -55,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76E41FC62CC85F040030FE71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F462B4382CC0280800A62363 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F462B43C2CC02C3F00A62363 /* BootCampWathcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BootCampWathcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F462B4412CC02C3F00A62363 /* BootCampWathcApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BootCampWathcApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +127,7 @@
 			children = (
 				F462B4382CC0280800A62363 /* Movie.swift */,
 				F498D8942CB4978000855D1F /* BootCampAppApp.swift */,
+				76E41FC62CC85F040030FE71 /* ContentView.swift */,
 				F498D8982CB4978200855D1F /* Assets.xcassets */,
 				F498D89A2CB4978200855D1F /* BootCampApp.entitlements */,
 				F498D89B2CB4978200855D1F /* Preview Content */,
@@ -327,6 +331,7 @@
 			files = (
 				F462B4742CC02C7D00A62363 /* Movie.swift in Sources */,
 				F462B4722CC02C6C00A62363 /* BootCampAppApp.swift in Sources */,
+				76E41FC72CC85F040030FE71 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +355,7 @@
 			files = (
 				F462B4392CC0280800A62363 /* Movie.swift in Sources */,
 				F498D8952CB4978000855D1F /* BootCampAppApp.swift in Sources */,
+				76E41FC82CC85F040030FE71 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

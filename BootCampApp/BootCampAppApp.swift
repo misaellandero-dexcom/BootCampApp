@@ -11,7 +11,7 @@ import SwiftUI
 struct BootCampAppApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView(movie: Movie.sample)
+            ContentView()
         }
     }
 }
